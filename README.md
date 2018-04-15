@@ -4,6 +4,7 @@
 
 ## Guava
 1. [LocalCache使用&源码分析](Guava/Guava-LocalCache.md)
+2. [ListenrFuture使用&源码分析](Guava/Guava-ListenerFuture.md)
 
 ## JDK-Concurrent包
 
