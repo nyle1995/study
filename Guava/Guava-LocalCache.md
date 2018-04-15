@@ -125,7 +125,7 @@ CacheBuilder.softValues()
 
 基本结构和ConcurrentHashMap1.6版本的类似，使用Segment，之后再下分为不同的节点
 
-![img](http://m10.music.126.net/21180228005704/48082f7fc96c1565eb38a3c9e9691bd2/music-app/mix_1521824224293634)
+![img](http://nos.netease.com/yyimgs/Jw4_0ndeHfUR6sP-BLVa-w==/109951163248809865)
 
 1. 引用被gc失效
 ```
