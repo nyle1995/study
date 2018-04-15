@@ -11,7 +11,8 @@
 4. 如果成功  
     头节点设置为自己  
     如果下一个节点也是SHARE节点，唤醒下一个有效节点
-    
+
+```
 private void doAcquireSharedInterruptibly(int arg)
     throws InterruptedException {
     final Node node = addWaiter(Node.SHARED);
@@ -37,6 +38,7 @@ private void doAcquireSharedInterruptibly(int arg)
             cancelAcquire(node);
     }
 }
+```
 
 ### countDown
 cas的方式，把state减1
