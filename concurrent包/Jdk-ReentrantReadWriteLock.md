@@ -18,11 +18,11 @@ static int exclusiveCount(int c) { return c & EXCLUSIVE_MASK; }
 
 ### 读锁-ReadLock
 
-维护
+维护
 1. firstReader  第一个读线程
 2. firstReaderHoldCount， 第一个读线程，读锁的hold数量
 3. readHolds 一个ThreadLocal， 线程对应的读锁获取的数量
-4. cachedHoldCounter  最后一个获取到读锁的线程的 counter
+4. cachedHoldCounter 最后一个获取到读锁的线程的 counter
 
 lock的时候调用  
 sync.acquireShared(1);
