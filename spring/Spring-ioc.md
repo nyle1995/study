@@ -3,6 +3,8 @@
 spring的ioc加载部分源码最近看了下，这里总结下
 
 ## spring 整个的生命周期
+![](spring-ioc.png)
+
 spring 容器起来
 1. BeanDefinitionRegistryPostProcessor实例化，然后执行
 2. BeanFactoryPostProcessor实例化，然后执行  
@@ -28,7 +30,6 @@ spring 容器起来
 然后加载完成之后
 执行SmartInitializingSingleton.afterSingletonsInstantiated
 
-![](spring-ioc.png)
 
 ## 源码分析
 
