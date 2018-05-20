@@ -66,7 +66,8 @@ proxy逻辑在是在wrapIfNecessary(bean, beanName, cacheKey);
 - SmartInstantiationAwareBeanPostProcessor.getEarlyBeanReference
 - InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation
 
-这个调用的地方，和为什么这么使用可以看下 todo?
+这个调用的地方，和为什么这么使用可以看下 
+[浅述 Spring 代理如何在循环依赖中解决的](spring-aop与循环依赖)
 
 
 ## 3. 具体加强的判断
