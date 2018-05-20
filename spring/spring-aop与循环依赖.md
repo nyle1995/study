@@ -71,8 +71,8 @@ public Object postProcessAfterInitialization(Object bean, String beanName) throw
 
 spring在初始化完之后，会check一遍  
 如果有循环依赖，即有early对象了
-    - 而且bean没有在beanPostProcessor被替换掉，那么就返回early对象到容器里
-    - 然后被修改过了，就会抛错处理
+- 而且bean没有在beanPostProcessor被替换掉，那么就返回early对象到容器里
+- 然后被修改过了，就会抛错处理
 ```
 bject earlySingletonReference = getSingleton(beanName, false);
 if (earlySingletonReference != null) {
@@ -102,6 +102,6 @@ if (earlySingletonReference != null) {
 ```
 
 ## 其他
-所以这里可以发现一个其他的问题
+所以这里可以发现一个其他的问题  
 如果你自己实现了一个beanPostProcessor, 那么你在postProcessAfterInitialization拿到的可能是代理类，也可能是原对象。  
 取决于这个对象是否被循环依赖了
