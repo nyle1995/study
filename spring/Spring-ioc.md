@@ -23,9 +23,11 @@ spring 容器起来
     加强的类如果循环依赖，这里就需要生成代理类了
 6. 各种aware方法
 7. beanPostProcessor.postProcessBeforeInitialization
+    aop加强的类，如果被循环引用了
 8. InitializingBean.afterPropertiesSet
 9. 设定的init-method方法
 10. beanPostProcessor.postProcessAfterInitialization
+    对于aop加强的类，这里bean已经换成了Proxy
 
 然后加载完成之后
 执行SmartInitializingSingleton.afterSingletonsInstantiated
