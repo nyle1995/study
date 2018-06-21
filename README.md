@@ -31,4 +31,4 @@
 # 其他
 - [GIT](/其他/Git.md)
 - [一个简单的Redis学习总结](其他/redis设计与实现/Redis设计与实现-阅读总结.md)
-- [Jarslink源码分析&思考](其他/jarslink/jarslink使用与展望.md)
+- [Jarslink源码分析&思考](其他/jarslink/Jarslink使用与展望.md)
