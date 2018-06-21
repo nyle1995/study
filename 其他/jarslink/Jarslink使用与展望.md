@@ -7,10 +7,58 @@
 
 - Module (调用者使用)  
     每一个隔离模块
-- Action (提供者实现)  
+- Action (提供者实现)  
     模块中的Service
 
 就是BeanFactory 和 bean的关系
+
+#### ModuleRefreshSchedulerImpl
+注册管理
+``` java
+ public static ModuleConfig buildModuleConfig() {
+    ModuleConfig moduleConfig = new ModuleConfig();
+    moduleConfig.setName("demo");
+    moduleConfig.setEnabled(true);
+    moduleConfig.setProperties(ImmutableMap.of("svnPath", new Object()));
+
+    boolean v1 = getV1Jar();
+    if (v1) {
+        moduleConfig.setVersion("1.0.0.20170621");
+        URL demoModule = Thread.currentThread().getContextClassLoader().getResource(JARSLINK_MODULE_DEMO_V1);
+        moduleConfig.setModuleUrl(ImmutableList.of(demoModule));
+        return moduleConfig;
+    } else {
+        moduleConfig.setVersion("1.0.0.20180618");
+        URL demoModule = Thread.currentThread().getContextClassLoader().getResource(JARSLINK_MODULE_DEMO);
+        moduleConfig.setModuleUrl(ImmutableList.of(demoModule));
+        return moduleConfig;
+    }
+}
+```
+
+#### Testservice
+``` java
+ public static void main(String[] args) {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("config.xml");
+        ModuleManager moduleManager = (ModuleManager) applicationContext.getBean("moduleManager");
+
+        while (true) {
+            //查找模块
+            Module findModule = moduleManager.find("demo");
+            String actionName = "overrideTestBeanAction";
+            String result = findModule.doAction(actionName, "aaa");
+            System.out.println(result);
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+```
+
 
 
 ## 原理分析
