@@ -100,6 +100,8 @@ public static final String JARSLINK_MODULE_DEMO = "jarslink-module-demo-1.0.0.ja
     - 实现方式：
         - 使用builder代理类来实现，使用module及参数传递过程
 - 管理系统来自动化部署流程
+- 每个module线程池隔离
+
 
 
 ![](jarslink-展望总的架构.png)
