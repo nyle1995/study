@@ -91,8 +91,8 @@ public static final String JARSLINK_MODULE_DEMO = "jarslink-module-demo-1.0.0.ja
 
 #### 展望
 
-- 提供使用jar包方式调用Module  
-    - 原因
+- 提供使用jar包方式调用Module  
+    - 原因
         - 目前需要客户端使用moduleName，actionname来调用
         - 看不到module的提供的action的参数 & 返回  
     - 实现方式：
