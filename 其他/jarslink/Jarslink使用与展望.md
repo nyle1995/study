@@ -65,16 +65,18 @@ public static final String JARSLINK_MODULE_DEMO = "jarslink-module-demo-1.0.0.ja
 
 
 ## 原理分析
+
+### 调用方流程
+![](jarlinks-调用.png)
+
+
+### 刷新流程
+
 - AbstractModuleRefreshScheduler: 定时刷新模块的抽象类 
 - ModuleLoader：模块加载引擎，负责模块加载
 - ModuleManager：模块管理者，负责在运行时注册，卸载，查找模块和执行Action
 - ModuleClassLoader: 自定义的ClassLoader，不使用双亲委派模型
 
-
-### 调用方流程
-![](jarlinks-调用.png)
-
-### 刷新流程
 ![](jarlinks-刷新流程.png)
 
 
