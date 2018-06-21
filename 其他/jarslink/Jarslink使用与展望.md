@@ -15,6 +15,9 @@
 #### ModuleRefreshSchedulerImpl
 注册管理
 ``` java
+public static final String JARSLINK_MODULE_DEMO_V1 = "jarslink-module-demo.jar";
+public static final String JARSLINK_MODULE_DEMO = "jarslink-module-demo-1.0.0.jar";
+
  public static ModuleConfig buildModuleConfig() {
     ModuleConfig moduleConfig = new ModuleConfig();
     moduleConfig.setName("demo");
@@ -36,7 +39,7 @@
 }
 ```
 
-#### Testservice
+#### TestService
 ``` java
  public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("config.xml");
