@@ -30,6 +30,7 @@
 - [Jarslink源码分析&思考](其他/jarslink/Jarslink源码分析.md)
 
 # 其他
+- [lombok原理&demo实战](其他/lombok/lombok实现原理及代码demo.md)
 - [GIT](/其他/Git.md)
 - [一个简单的Redis学习总结](其他/redis设计与实现/Redis设计与实现-阅读总结.md)
 - [时间管理](/其他/GTD/时间管理-1期.md)
